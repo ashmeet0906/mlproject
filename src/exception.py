@@ -1,5 +1,6 @@
 import sys #sys is provides various functions and variables that are used to manipulate different parts of the Python runtime environment 
-import logging
+from logger import logging
+import logger
 
 def error_message_details(error,error_detail:sys):
    _,_,exc_tb= error_detail.exc_info()#execution information
@@ -27,4 +28,5 @@ if __name__=="__main__":
         a=1/0
     except Exception as e: 
         logging.info("Divide by Zero")
-        raise CustomException(e,sys)'''
+        raise CustomException(e,sys)
+'''
